@@ -5,55 +5,36 @@ import com.jogamp.opengl.util.FPSAnimator;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
 
 public class start {
-    private static final int FPS = 60; // animator's target frames per second
+    private static final int FPS = 300; // animator's target frames per second
 
     public void start() {
         try {
-            Frame testFrame = new Frame("TestFrame");
-            testFrame.setSize(512, 384);
-
-            // setup OpenGL version
-            GLProfile profile = GLProfile.getMaximum(true);
+            //getting the capabilities object of GL2 profile
+            final GLProfile profile = GLProfile.get(GLProfile.GL2);
             GLCapabilities capabilities = new GLCapabilities(profile);
 
-            // The canvas is the widget that's drawn in the JFrame
-            GLCanvas canvas = new GLCanvas(capabilities);
-          //  Renderer ren = new Renderer();
-          //  canvas.addGLEventListener(ren);
-          //  canvas.addMouseListener(ren);
-          //  canvas.addMouseMotionListener(ren);
-          //  canvas.addKeyListener(ren);
-            canvas.setSize( 800, 600 );
+            // The canvas
+            final GLCanvas glcanvas = new GLCanvas(capabilities);
+            start2 s = new start2();
+            glcanvas.addGLEventListener(s);
+            glcanvas.addMouseListener(s);
+            glcanvas.addMouseMotionListener(s);
+            glcanvas.addKeyListener(s);
 
 
-            testFrame.add(canvas);
+            glcanvas.setSize(1024, 780);
 
-            //shutdown the program on windows close event
+            //creating frame
+            final Frame frame = new Frame (" Budik");
+            //adding canvas to frame
+            frame.add(glcanvas);
+            frame.setSize( 1024, 780 );
+            frame.setVisible(true);
 
-            //final Animator animator = new Animator(canvas);
-            final FPSAnimator animator = new FPSAnimator(canvas, FPS, true);
-
-            testFrame.addWindowListener(new WindowAdapter() {
-                @Override
-                public void windowClosing(WindowEvent e) {
-                    new Thread() {
-                        @Override
-                        public void run() {
-                            if (animator.isStarted()) animator.stop();
-                            System.exit(0);
-                        }
-                    }.start();
-                }
-            });
-       //     testFrame.setTitle(ren.getClass().getName());
-            testFrame.pack();
-            testFrame.setVisible(true);
-            animator.start(); // start the animation loop
+            final FPSAnimator animator = new FPSAnimator(glcanvas,300,true);
+            animator.start();
 
 
         } catch (Exception e) {
