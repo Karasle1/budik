@@ -1,33 +1,35 @@
 
 import com.jogamp.opengl.*;
-import com.jogamp.opengl.awt.GLCanvas;
-import com.jogamp.opengl.glu.GLU;
-import com.jogamp.opengl.util.FPSAnimator;
 
-import java.awt.*;
+import com.jogamp.opengl.glu.GLU;
+
+
+
 import java.awt.event.*;
-import java.lang.reflect.Array;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
+
+
 
 import transforms.Camera;
-//import javafx.scene.Camera;
 import transforms.Vec3D;
+
 
 
 
 public class start2 implements GLEventListener, MouseListener,
         MouseMotionListener, KeyListener {
     private GLU glu = new GLU();
-    Camera cam = new Camera().withPosition(new Vec3D(0, 0, 0))
+    Camera cam = new Camera().withPosition(new Vec3D(0, 0, -1.5))
             .withAzimuth(Math.PI * 1.25)
             .withZenith(Math.PI * -0.125);
-    int  ox, oy;
+    int  ox, oy, delta;
     int width = 100;
 
-    ArrayList cifernik = new ArrayList<Double>();
-    ArrayList zada = new ArrayList<Double>();
+
+    ArrayList cifernik = new ArrayList<Vec3D>();
+    ArrayList zada = new ArrayList<Vec3D>();
 
 
     @Override
@@ -46,30 +48,32 @@ public class start2 implements GLEventListener, MouseListener,
         double xc = cam.getPosition().getX();
         double yc = cam.getPosition().getY();
         double zc = cam.getPosition().getZ();
-        System.out.println(xc + yc + zc);
+
         gl.glLoadIdentity();
 
-
         gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
-        gl.glRotated(cam.getZenith(), 1.0f, 0.0f, 0.0f);
+        gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
+        gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
         gl.glTranslated(xc,yc,zc);
 
 
 
         gl.glBegin(GL2.GL_TRIANGLE_FAN);
-        gl.glColor3f(0.5f, 0.9f, 0.09f);
+
+        gl.glColor3f(0.173f, 0.173f, 0f);
         gl.glVertex3d(0.00f,0.00f,-4.0f);
        for(int i =0; i <= 360; i++) {
            double angle = 2 * Math.PI * i / 360;
            double x = Math.cos(angle);
            double y = Math.sin(angle);
-           cifernik.add(i,x);
-           cifernik.add(i+1,y);
-           gl.glColor3f(0.5f, 0.9f, 0.09f);
+           Vec3D vrchol = new Vec3D(x,y,-4f);
+           cifernik.add(vrchol);
+           gl.glColor3f(0.173f, 0.173f, 0f);
            gl.glVertex3d(x, y, -4f);
-           gl.glColor3f(0.5f, 0.9f, 0.09f);
+           gl.glColor3f(0.173f, 0.173f, 0f);
            gl.glVertex3d(x, y, -4f);
        }
+
         gl.glEnd();
 
         gl.glBegin(GL2.GL_TRIANGLE_FAN);
@@ -81,8 +85,8 @@ public class start2 implements GLEventListener, MouseListener,
                double angle = 2 * Math.PI * i / 360;
                double x = Math.cos(angle);
                double y = Math.sin(angle);
-               zada.add(x);
-               zada.add(y);
+               Vec3D vrchol1 = new Vec3D(x,y,-5f);
+               zada.add(vrchol1);
                gl.glColor3f(0.9f, 0.09f, 0.09f);
                gl.glVertex3d(x, y, -5f);
                gl.glColor3f(0.9f, 0.09f, 0.09f);
@@ -91,45 +95,26 @@ public class start2 implements GLEventListener, MouseListener,
                gl.glEnd();
 
 
-/*
-       gl.glBegin(GL2.GL_TRIANGLE_FAN);
-        gl.glColor3f(0.09f, 0.9f, 0.9f);
-        gl.glVertex3d(0.00f,0.00f,-4.0f);
-        for(int i =0; i <= cifernik.size(); i++) {
 
-            double x = cifernik.get(i);
-            double y =  cifernik.get(i+1);
-            gl.glColor3f(0.09f, 0.9f, 0.9f);
-            gl.glVertex3d(x, y, -4f);
+       gl.glBegin(GL2.GL_QUAD_STRIP);
+        for(int i =0; i <= 360; i++) {
 
-             x = cifernik.getItem(i+2);
-             y =  cifernik.get(i+3);
+           Vec3D a = (Vec3D) cifernik.get(i);
+            gl.glColor3f(0.09f, 0.09f, 0.9f);
+            gl.glVertex3d(a.getX(), a.getY(), a.getZ());
 
-
-            gl.glColor3f(0.09f, 0.9f, 0.9f);
-             x =  zada.get(i);
-             y =  zada.get(i+1);
-
-            gl.glColor3f(0.09f, 0.9f, 0.9f);
-            gl.glVertex3d(x, y, -4f);
-
+            Vec3D b = (Vec3D) zada.get(i);
+            gl.glColor3f(0.09f, 0.09f, 0.9f);
+            gl.glVertex3d(b.getX(), b.getY(), b.getZ());
         }
-        gl.glEnd();*/
 
-
-
-
-
-
-
-
-
-
+        gl.glEnd();
 
 
               gl.glLoadIdentity();
         gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
-        gl.glRotated(cam.getZenith(), 1.0f, 0.0f, 0.0f);
+        gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
+        gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
         gl.glTranslated(xc,yc,zc);
            gl.glRotatef(deltaH, 0, 0, 1);
               gl.glBegin(GL2.GL_TRIANGLES);
@@ -142,7 +127,8 @@ public class start2 implements GLEventListener, MouseListener,
 
               gl.glLoadIdentity();
         gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
-        gl.glRotated(cam.getZenith(), 1.0f, 0.0f, 0.0f);
+        gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
+        gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
         gl.glTranslated(xc,yc,zc);
            gl.glRotatef(deltaM, 0, 0, 1);
               gl.glBegin(GL2.GL_TRIANGLES);
@@ -153,7 +139,8 @@ public class start2 implements GLEventListener, MouseListener,
         gl.glEnd();
             gl.glLoadIdentity();
         gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
-        gl.glRotated(cam.getZenith(), 1.0f, 0.0f, 0.0f);
+        gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
+        gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
         gl.glTranslated(xc,yc,zc);
            gl.glRotatef(deltaS, 0, 0, 1);
               gl.glBegin(GL2.GL_LINE_STRIP);
@@ -219,9 +206,9 @@ public class start2 implements GLEventListener, MouseListener,
             case KeyEvent.VK_CONTROL:
                 cam = cam.down(1);
                 break;
-            case KeyEvent.VK_SHIFT:
+        /*    case KeyEvent.VK_SHIFT:
                 cam = cam.up(1);
-                break;
+                break;*/
             case KeyEvent.VK_SPACE:
                 cam = cam.withFirstPerson(!cam.getFirstPerson());
                 break;
@@ -230,6 +217,11 @@ public class start2 implements GLEventListener, MouseListener,
                 break;
             case KeyEvent.VK_F:
                 cam = cam.mulRadius(1.1f);
+                break;
+            case KeyEvent.VK_T:
+
+                    delta ++;
+
                 break;
         }
 

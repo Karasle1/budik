@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="68" />
+    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="71" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4baff-d496-4f80-894f-5c012c2984b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ukazky_Vanek.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Budik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Renderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/budik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/budik.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/budik/start2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/start2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/start2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,11 +21,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="187">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1557937411329" expanded="true" signature="3798:4036" ph="..." />
+                <marker date="1558008800960" expanded="true" signature="3481:3719" ph="..." />
               </folding>
             </state>
           </provider>
@@ -74,9 +64,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="2418" />
+    <option name="height" value="1235" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -84,7 +75,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -106,6 +96,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,17 +167,18 @@
       <workItem from="1557906075846" duration="12327000" />
       <workItem from="1557921664059" duration="5689000" />
       <workItem from="1557935534747" duration="1894000" />
+      <workItem from="1557990246360" duration="1466000" />
+      <workItem from="1557997811146" duration="4796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34522000" />
+    <option name="totallyTimeSpent" value="40784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="0" width="1934" height="988" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16510066" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1339381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -195,7 +187,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25070822" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26837805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -205,7 +197,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32719547" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32719395" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -257,11 +249,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/start2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="187">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1557937411329" expanded="true" signature="3798:4036" ph="..." />
+            <marker date="1558008800960" expanded="true" signature="3481:3719" ph="..." />
           </folding>
         </state>
       </provider>
