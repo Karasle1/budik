@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="71" />
+    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="92" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4baff-d496-4f80-894f-5c012c2984b0" name="Default Changelist" comment="">
@@ -21,10 +21,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="281">
+              <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
               <folding>
-                <marker date="1558008800960" expanded="true" signature="3481:3719" ph="..." />
+                <element signature="e#2893#3340#1" />
+                <element signature="e#3540#3958#1" />
+                <element signature="method#dispose#0;class#start2#0" />
+                <element signature="method#reshape#0;class#start2#0" />
+                <element signature="method#keyTyped#0;class#start2#0" />
+                <element signature="method#keyPressed#0;class#start2#0" />
+                <element signature="e#6891#7870#0" />
+                <element signature="method#keyReleased#0;class#start2#0" />
+                <element signature="method#mouseClicked#0;class#start2#0" />
+                <element signature="method#mousePressed#0;class#start2#0" />
+                <element signature="method#mouseReleased#0;class#start2#0" />
+                <element signature="method#mouseEntered#0;class#start2#0" />
+                <element signature="method#mouseExited#0;class#start2#0" />
+                <element signature="method#mouseDragged#0;class#start2#0" />
+                <element signature="method#mouseMoved#0;class#start2#0" />
+                <marker date="1559740366931" expanded="false" signature="4651:4889" ph="..." />
               </folding>
             </state>
           </provider>
@@ -64,10 +79,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="2418" />
-    <option name="height" value="1235" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -75,7 +91,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,22 +103,19 @@
               <item name="budik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="budik" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557937418995" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559740367084" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Grafika/Grafika" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -169,16 +181,21 @@
       <workItem from="1557935534747" duration="1894000" />
       <workItem from="1557990246360" duration="1466000" />
       <workItem from="1557997811146" duration="4796000" />
+      <workItem from="1558092793442" duration="624000" />
+      <workItem from="1558429052141" duration="869000" />
+      <workItem from="1559291226460" duration="11259000" />
+      <workItem from="1559716716634" duration="13100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40784000" />
+    <option name="totallyTimeSpent" value="66636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1934" height="988" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1339381" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14026846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -187,7 +204,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26837805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34985834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -213,13 +230,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLEventListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -247,13 +257,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/start2.java">
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <marker date="1558008800960" expanded="true" signature="3481:3719" ph="..." />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -263,6 +270,38 @@
           <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLEventListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="132" column="10" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
+          <folding>
+            <element signature="e#2893#3340#1" />
+            <element signature="e#3540#3958#1" />
+            <element signature="method#dispose#0;class#start2#0" />
+            <element signature="method#reshape#0;class#start2#0" />
+            <element signature="method#keyTyped#0;class#start2#0" />
+            <element signature="method#keyPressed#0;class#start2#0" />
+            <element signature="e#6891#7870#0" />
+            <element signature="method#keyReleased#0;class#start2#0" />
+            <element signature="method#mouseClicked#0;class#start2#0" />
+            <element signature="method#mousePressed#0;class#start2#0" />
+            <element signature="method#mouseReleased#0;class#start2#0" />
+            <element signature="method#mouseEntered#0;class#start2#0" />
+            <element signature="method#mouseExited#0;class#start2#0" />
+            <element signature="method#mouseDragged#0;class#start2#0" />
+            <element signature="method#mouseMoved#0;class#start2#0" />
+            <marker date="1559740366931" expanded="false" signature="4651:4889" ph="..." />
           </folding>
         </state>
       </provider>
