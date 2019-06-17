@@ -7,6 +7,9 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
+
+import com.jogamp.opengl.glu.GLUquadric;
+import com.jogamp.opengl.util.gl2.GLUT;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
 
@@ -49,6 +52,7 @@ public class start2 implements GLEventListener, MouseListener,
   @Override
     public void display(GLAutoDrawable drawable) {
         final GL2 gl = drawable.getGL().getGL2();
+
         gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL3.GL_DEPTH_BUFFER_BIT );
         gl.glEnable(GL2GL3.GL_DEPTH_TEST);
 
@@ -59,14 +63,33 @@ public class start2 implements GLEventListener, MouseListener,
         int sec = LocalDateTime.now().getSecond();
         float deltaS = -(sec * 6);
 
+
         double xc = cam.getPosition().getX();
         double yc = cam.getPosition().getY();
         double zc = cam.getPosition().getZ();
+      GLUquadric quadObj;
+      
+       quadObj = glu.gluNewQuadric();
+
 
         float [] light_position = new float[] { 1, 0, 0, 1.0f};
 
       //   gl.glMatrixMode(GL2.GL_PROJECTION);
+
+
+
         gl.glLoadIdentity();
+      gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
+      gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
+      gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
+      gl.glTranslated(xc,yc,zc);
+      gl.glBegin(GLU.GLU_BEGIN);
+      gl.glTranslatef(-0.5f,-0.5f,-2.5f);
+      gl.glRotated(180, 1.0f, 0.0f, 0.0f);
+      glu.gluCylinder(quadObj,0.05f,0.05f,0.50f,32,32);
+      gl.glBegin(GLU.GLU_END);
+
+      gl.glLoadIdentity();
         gl.glRotated(-cam.getAzimuth(), 0.0f, 1.0f, 0.0f);
         gl.glRotated(cam.getZenith()*10, 1.0f, 0.0f, 0.0f);
         gl.glRotated(delta, 0.0f, 1.0f, 0.0f);
@@ -74,34 +97,29 @@ public class start2 implements GLEventListener, MouseListener,
 
         gl.glMatrixMode(GL2.GL_MODELVIEW);
         gl.glLightfv(GL2.GL_LIGHT0,GL2.GL_POSITION, light_position,0);
-     //   gl.glBindTexture(GL_TEXTURE0, 0);
-
+        gl.glBindTexture(GL_TEXTURE, 0);
         gl.glBegin(GL2.GL_TRIANGLE_FAN);
-      //   gl.glColor3f(0.173f, 0.173f, 0f);
-        gl.glTexCoord2d(0,0);
+        gl.glColor3f(0.255f, 0.255f, 0.255f);
+        gl.glTexCoord2d(0.49,0.5);
         gl.glVertex3d(0.00f,0.00f,-4.0f);
        for(int i =0; i <= 360; i++) {
 
-         //  gl.glTexEnvi(gl.GL_TEXTURE_ENV,gl.GL_TEXTURE_ENV_MODE,gl.GL_REPLACE);
+           gl.glTexEnvi(gl.GL_TEXTURE_ENV,gl.GL_TEXTURE_ENV_MODE,gl.GL_REPLACE);
            double angle = 2 * Math.PI * i / 360;
            double x = Math.cos(angle);
            double y = Math.sin(angle);
            Vec3D vrchol = new Vec3D(x,y,-4f);
            cifernik.add(vrchol);
-     //      gl.glColor3f(0.173f, 0.173f, 0f);
-           gl.glTexCoord2d(x,y);
+           gl.glColor3f(0.255f, 0.255f, 0.255f);
+           gl.glTexCoord2d((x/2)+0.49,(y/2)+0.5);
            gl.glVertex3d(x, y, -4f);
-        //   gl.glColor3f(0.173f, 0.173f, 0f);
-           gl.glTexCoord2d(x,y);
-           gl.glVertex3d(x, y, -4f);
-
        }
         gl.glEnd();
 
         gl.glBegin(GL2.GL_TRIANGLE_FAN);
 
-    //    gl.glColor3f(0.09f, 0.9f, 0.09f);
-    //    gl.glVertex3d(0.00f,0.00f,-5.0f);
+        gl.glColor3f(0.09f, 0.9f, 0.09f);
+       gl.glVertex3d(0.00f,0.00f,-5.0f);
            gl.glColor3f(0.9f, 0.09f, 0.09f);
            gl.glVertex3d(0.0f, 0.0f, -5f);
            for (int i = 0; i <= 360; i++) {
@@ -112,12 +130,12 @@ public class start2 implements GLEventListener, MouseListener,
                zada.add(vrchol1);
                gl.glColor3f(0.9f, 0.09f, 0.09f);
                gl.glVertex3d(x, y, -5f);
-               gl.glColor3f(0.9f, 0.09f, 0.09f);
-               gl.glVertex3d(x, y, -5f);
+        //       gl.glColor3f(0.9f, 0.09f, 0.09f);
+          //     gl.glVertex3d(x, y, -5f);
            }
                gl.glEnd();
 
-
+      gl.glBindTexture(GL_TEXTURE, 1);
 
        gl.glBegin(GL2.GL_QUAD_STRIP);
       gl.glActiveTexture(1);
@@ -145,8 +163,8 @@ public class start2 implements GLEventListener, MouseListener,
            gl.glRotatef(deltaH, 0, 0, 1);
               gl.glBegin(GL2.GL_TRIANGLES);
            gl.glColor3f(1.0f, 0.0f, 0.0f);
-           gl.glVertex3f(-0.010f, 0.00f, -3.9f);
-           gl.glVertex3f(0.010f, 0.00f, -3.9f);
+           gl.glVertex3f(-0.030f, 0.00f, -3.9f);
+           gl.glVertex3f(0.030f, 0.00f, -3.9f);
            gl.glVertex3f(0.00f, 0.50f, -3.9f);
         gl.glEnd();
 
@@ -159,8 +177,8 @@ public class start2 implements GLEventListener, MouseListener,
            gl.glRotatef(deltaM, 0, 0, 1);
               gl.glBegin(GL2.GL_TRIANGLES);
            gl.glColor3f(0.0f, 1.0f, 0.0f);
-           gl.glVertex3f(-0.01f, 0.0f, -3.9f);
-           gl.glVertex3f(0.01f, 0.0f, -3.9f);
+           gl.glVertex3f(-0.03f, 0.0f, -3.9f);
+           gl.glVertex3f(0.03f, 0.0f, -3.9f);
            gl.glVertex3f(0.0f, 0.70f, -3.9f);
         gl.glEnd();
             gl.glLoadIdentity();
@@ -170,11 +188,13 @@ public class start2 implements GLEventListener, MouseListener,
         gl.glTranslated(xc,yc,zc);
            gl.glRotatef(deltaS, 0, 0, 1);
               gl.glBegin(GL2.GL_LINE_STRIP);
-           gl.glColor3f(0.0f, 0.50f, -3.90f);
+           gl.glColor3f(0.02f, 0.50f, -3.90f);
            gl.glVertex3f(0.0f, 0.0f, -3.90f);
            gl.glVertex3f(0.0f, 0.80f, -3.90f);
            gl.glEnd();
-       }
+
+
+  }
 
     @Override
     public void dispose(GLAutoDrawable glDrawable) {
@@ -193,8 +213,8 @@ public class start2 implements GLEventListener, MouseListener,
             // System.out.print("Loading texture...");
             texture = TextureIO.newTexture(new File("textures/ciselnik.png"), true);
             texture.bind(gl);
-           texture0 = TextureIO.newTexture(new File("textures/mosaz1.jpg"), true);
-           texture0.bind(gl);
+         //   texture0 = TextureIO.newTexture(new File("textures/mosaz1.jpg"), true);
+       //     texture0.bind(gl);
 
 
          //   img = ImageIO.read(new File("textures/desk.jpg"));
