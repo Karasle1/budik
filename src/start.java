@@ -33,7 +33,7 @@ public class start {
             frame.setSize( 1024, 780 );
             frame.setVisible(true);
 
-            final FPSAnimator animator = new FPSAnimator(glcanvas,300,true);
+            final FPSAnimator animator = new FPSAnimator(glcanvas,30,true);
             animator.start();
 
 
