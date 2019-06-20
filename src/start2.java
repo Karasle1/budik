@@ -1,24 +1,24 @@
 import com.jogamp.opengl.*;
 import com.jogamp.opengl.glu.GLU;
 import java.awt.event.*;
+import java.io.*;
 import java.nio.DoubleBuffer;
 import java.nio.IntBuffer;
 import com.jogamp.opengl.glu.GLUquadric;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
-import java.io.File;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.time.ZonedDateTime;
-import java.util.concurrent.TimeUnit;
-
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 import transforms.Camera;
 import transforms.Vec3D;
+
+
 import static com.jogamp.opengl.GL.*;
 
-public class start2 implements GLEventListener, MouseListener,
-        MouseMotionListener, KeyListener {
+public class start2 extends Thread implements GLEventListener, MouseListener,
+        MouseMotionListener, KeyListener{
 
     private GLU glu = new GLU();
     Camera cam = new Camera().withPosition(new Vec3D(0, 0, -1.5))
@@ -28,13 +28,13 @@ public class start2 implements GLEventListener, MouseListener,
     int width = 100;
 
 
-    Texture texture;
-    Texture texture0;
+    Texture texture,texture0,texture1;
 
     IntBuffer textId = IntBuffer.allocate(10);
 
     ArrayList cifernik = new ArrayList<Vec3D>();
     ArrayList zada = new ArrayList<Vec3D>();
+    boolean wakeTime;
 
     @Override
     public void display(GLAutoDrawable drawable) {
@@ -49,7 +49,7 @@ public class start2 implements GLEventListener, MouseListener,
         float deltaM = -(minute * 6);
         int sec = LocalDateTime.now().getSecond();
         float deltaS = -(sec * 6);
-        boolean wakeTime;
+
 
 
         double xc = cam.getPosition().getX();
@@ -153,12 +153,12 @@ public class start2 implements GLEventListener, MouseListener,
 
             Vec3D a = (Vec3D) cifernik.get(i);
             gl.glTexCoord2d(a.getX(), a.getY());
-            gl.glColor3f(0.09f, 0.09f, 0.9f);
+     //       gl.glColor3f(0.09f, 0.09f, 0.9f);
             gl.glVertex3d(a.getX(), a.getY(), a.getZ());
 
             Vec3D b = (Vec3D) zada.get(i);
             gl.glTexCoord2d(b.getX(), b.getY());
-            gl.glColor3f(0.09f, 0.09f, 0.9f);
+      //      gl.glColor3f(0.09f, 0.09f, 0.9f);
             gl.glVertex3d(b.getX(), b.getY(), b.getZ());
         }
 
@@ -168,7 +168,7 @@ public class start2 implements GLEventListener, MouseListener,
         camera(gl, xc, yc, zc);
         gl.glRotatef(deltaH, 0, 0, 1);
         gl.glBegin(GL2.GL_TRIANGLES);
-        gl.glColor3f(1.0f, 0.0f, 0.0f);
+    //    gl.glColor3f(1.0f, 0.0f, 0.0f);
         gl.glVertex3f(-0.030f, 0.00f, -3.9f);
         gl.glVertex3f(0.030f, 0.00f, -3.9f);
         gl.glVertex3f(0.00f, 0.50f, -3.9f);
@@ -177,18 +177,31 @@ public class start2 implements GLEventListener, MouseListener,
         camera(gl, xc, yc, zc);
         gl.glRotatef(deltaM, 0, 0, 1);
         gl.glBegin(GL2.GL_TRIANGLES);
-        gl.glColor3f(0.0f, 1.0f, 0.0f);
+   //    gl.glColor3f(0.0f, 1.0f, 0.0f);
         gl.glVertex3f(-0.03f, 0.0f, -3.9f);
         gl.glVertex3f(0.03f, 0.0f, -3.9f);
         gl.glVertex3f(0.0f, 0.70f, -3.9f);
         gl.glEnd();
+
         camera(gl, xc, yc, zc);
         gl.glRotatef(deltaS, 0, 0, 1);
         gl.glBegin(GL2.GL_LINE_STRIP);
-        gl.glColor3f(0.02f, 0.50f, -3.90f);
+   //     gl.glColor3f(0.02f, 0.50f, -3.90f);
         gl.glVertex3f(0.0f, 0.0f, -3.90f);
         gl.glVertex3f(0.0f, 0.80f, -3.90f);
         gl.glEnd();
+
+        camera(gl, xc, yc, zc);
+      //  gl.glRotatef(deltaS, 0, 0, 1);
+        texture1.bind(gl);
+        gl.glBegin(GL2.GL_QUAD_STRIP);
+     //   gl.glColor3f(0.255f, 0.0f, 0.0f);
+        gl.glVertex3f(-0.01f, 0.0f, -3.90f);
+        gl.glVertex3f(0.01f, 0.0f, -3.90f);
+        gl.glVertex3f(-0.01f, 0.8f, -3.90f);
+        gl.glVertex3f(0.01f, 0.8f, -3.90f);
+        gl.glEnd();
+        texture0.bind(gl);
 
         //palicka
         wakeTime = true;
@@ -209,8 +222,12 @@ public class start2 implements GLEventListener, MouseListener,
            long mili = System.currentTimeMillis();
                 zvoneni(gl, quadObj, xc, yc, zc, mili);
 
+                zvuk();
+
+
+            }
         }
-    }
+
 
     private void camera(GL2 gl, double xc, double yc, double zc) {
         gl.glLoadIdentity();
@@ -220,22 +237,30 @@ public class start2 implements GLEventListener, MouseListener,
         gl.glTranslated(xc, yc, zc);
     }
 
+
+    private void zvuk() {
+
+        Thread z = new Thread();
+        public void run() {
+            InputStream zStream = null;
+            try {
+                zStream = new FileInputStream("sound/budik.wav");
+                AudioStream audioStream = new AudioStream(zStream);
+                AudioPlayer.player.start(audioStream);
+                wakeTime = false;
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+    }
+
     private void zvoneni(GL2 gl,GLUquadric quadObj,double xc, double yc, double zc, long mili) {
 
 
-        /*    if ((mili) % 10 == 0) {
-                    camera(gl, xc, yc, zc);
-                    gl.glTranslatef(0f, 0.8f, -4.5f);
-                    gl.glRotated(90, 0.0f, 1.0f, 0.0f);
-                    gl.glRotated(270, 1.0f, 0.0f, 0.0f);
-                    glu.gluCylinder(quadObj, 0.02f, 0.02f, 0.70f, 32, 32);
-                    camera(gl, xc, yc, zc);
-                    gl.glTranslatef(0.15f, 1.5f, -4.5f);
-                    gl.glRotated(90, 0.0f, 1.0f, 0.0f);
-                    gl.glRotated(180, 1.0f, 0.0f, 0.0f);
-                    glu.gluCylinder(quadObj, 0.05f, 0.05f, 0.3f, 32, 32);
-
-                }*/
                  if ((mili) % 2 != 0) {
                     camera(gl, xc, yc, zc);
                     gl.glTranslatef(0f, 0.9f, -4.5f);
@@ -243,24 +268,23 @@ public class start2 implements GLEventListener, MouseListener,
                     gl.glRotated(250, 1.0f, 0.0f, 0.0f);
                     glu.gluCylinder(quadObj, 0.02f, 0.02f, 0.70f, 32, 32);
                     camera(gl, xc, yc, zc);
-                    gl.glTranslatef(0.25f, 1.5f, -4.5f);
-                    gl.glRotated(90, 0.0f, 1.0f, 0.0f);
-                    gl.glRotated(200, 1.0f, 0.0f, 0.0f);
-                    glu.gluCylinder(quadObj, 0.05f, 0.05f, 0.3f, 32, 32);
+                     gl.glTranslatef(-0.1f, 1.6f, -4.5f);
+                     gl.glRotated(90, 0.0f, 1.0f, 0.0f);
+                     gl.glRotated(160 , 1.0f, 0.0f, 0.0f);
+                     glu.gluCylinder(quadObj, 0.05f, 0.05f, 0.3f, 32, 32);
 
                 }
                 else if ((mili) % 2 == 0){
                     camera(gl, xc, yc, zc);
                     gl.glTranslatef(0f, 0.9f, -4.5f);
                     gl.glRotated(90, 0.0f, 1.0f, 0.0f);
-                    gl.glRotated(290, 1.0f, 0.0f, 0.0f);
+                    gl.glRotated(295, 1.0f, 0.0f, 0.0f);
                     glu.gluCylinder(quadObj, 0.02f, 0.02f, 0.70f, 32, 32);
                     camera(gl, xc, yc, zc);
-                    gl.glTranslatef(0.15f, 1.5f, -4.5f);
-                    gl.glRotated(90, 0.0f, 1.0f, 0.0f);
-                    gl.glRotated(180 , 1.0f, 0.0f, 0.0f);
-                    glu.gluCylinder(quadObj, 0.05f, 0.05f, 0.3f, 32, 32);
-
+                     gl.glTranslatef(0.45f, 1.5f, -4.5f);
+                     gl.glRotated(90, 0.0f, 1.0f, 0.0f);
+                     gl.glRotated(200, 1.0f, 0.0f, 0.0f);
+                     glu.gluCylinder(quadObj, 0.05f, 0.05f, 0.3f, 32, 32);
             }
 
         }
@@ -290,6 +314,7 @@ public class start2 implements GLEventListener, MouseListener,
        //     texture.bind(gl);
             texture0 = TextureIO.newTexture(new File("textures/mosaz1.jpg"), true);
          //   texture0.bind(gl);
+           texture1 = TextureIO.newTexture(new File("textures/textureRed.jpg"), true);
 
 
          //   img = ImageIO.read(new File("textures/desk.jpg"));
