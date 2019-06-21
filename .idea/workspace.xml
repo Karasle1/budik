@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="126" />
+    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="115" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4baff-d496-4f80-894f-5c012c2984b0" name="Default Changelist" comment="">
@@ -35,10 +35,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/start2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+            <state relative-caret-position="209">
+              <caret line="188" column="158" selection-start-line="188" selection-start-column="158" selection-end-line="188" selection-end-column="158" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8324#8376#0" />
                 <element signature="method#dispose#0;class#start2#0" />
                 <element signature="method#reshape#0;class#start2#0" />
                 <element signature="method#keyTyped#0;class#start2#0" />
@@ -47,8 +48,7 @@
                 <element signature="method#mouseReleased#0;class#start2#0" />
                 <element signature="method#mouseEntered#0;class#start2#0" />
                 <element signature="method#mouseExited#0;class#start2#0" />
-                <element signature="method#mouseMoved#0;class#start2#0" />
-                <marker date="1561029096892" expanded="true" signature="5583:5810" ph="..." />
+                <marker date="1561118430424" expanded="true" signature="5464:5649" ph="..." />
               </folding>
             </state>
           </provider>
@@ -57,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="221">
               <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,8 +90,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3926" />
-    <option name="y" value="-47" />
+    <option name="x" value="2156" />
+    <option name="y" value="68" />
     <option name="width" value="1552" />
     <option name="height" value="880" />
   </component>
@@ -117,8 +117,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,16 +204,18 @@
       <workItem from="1560952504829" duration="42000" />
       <workItem from="1561014048864" duration="3066000" />
       <workItem from="1561021418911" duration="6651000" />
+      <workItem from="1561102758280" duration="294000" />
+      <workItem from="1561105595754" duration="8486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109447000" />
+    <option name="totallyTimeSpent" value="118227000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3832" y="-141" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09754797" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09968017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -252,25 +254,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/start2.java</url>
-          <line>117</line>
+          <line>106</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/start2.java</url>
-          <line>410</line>
+          <line>380</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/start2.java</url>
-          <line>169</line>
+          <line>153</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/start2.java</url>
-          <line>260</line>
+          <line>248</line>
           <properties class="start2" method="zvoneni">
             <option name="EMULATED" value="true" />
           </properties>
@@ -322,22 +324,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cifernik.java" />
-    <entry file="file://$PROJECT_DIR$/src/start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/start2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+        <state relative-caret-position="209">
+          <caret line="188" column="158" selection-start-line="188" selection-start-column="158" selection-end-line="188" selection-end-column="158" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8324#8376#0" />
             <element signature="method#dispose#0;class#start2#0" />
             <element signature="method#reshape#0;class#start2#0" />
             <element signature="method#keyTyped#0;class#start2#0" />
@@ -346,8 +339,17 @@
             <element signature="method#mouseReleased#0;class#start2#0" />
             <element signature="method#mouseEntered#0;class#start2#0" />
             <element signature="method#mouseExited#0;class#start2#0" />
-            <element signature="method#mouseMoved#0;class#start2#0" />
-            <marker date="1561029096892" expanded="true" signature="5583:5810" ph="..." />
+            <marker date="1561118430424" expanded="true" signature="5464:5649" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
