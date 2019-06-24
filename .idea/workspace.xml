@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="budik.jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/start2.java" line="110" />
+    <bookmark url="file://$PROJECT_DIR$/src/Renderer.java" line="109" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4baff-d496-4f80-894f-5c012c2984b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Zvuk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/budik_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ukazky_Vanek.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ukazky_Vanek.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/META-INF/budik.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/budik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/budik.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/Budik$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/Budik$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/Budik.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/start$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/budik/start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/budik/start2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Budik.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Renderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/start2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/start2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/start2.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,26 +50,18 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/start2.java">
+        <entry file="file://$PROJECT_DIR$/src/Renderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#reshape#0;class#start2#0" />
-                <element signature="method#keyTyped#0;class#start2#0" />
-                <element signature="method#keyPressed#0;class#start2#0" />
-                <element signature="method#keyReleased#0;class#start2#0" />
-                <element signature="method#mouseReleased#0;class#start2#0" />
-                <element signature="method#mouseEntered#0;class#start2#0" />
-                <element signature="method#mouseExited#0;class#start2#0" />
-                <marker date="1561380898996" expanded="true" signature="5635:5820" ph="..." />
+                <marker date="1561382034626" expanded="true" signature="5599:5784" ph="..." />
               </folding>
             </state>
           </provider>
@@ -66,10 +72,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,12 +79,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/start.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="323">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1292#1474#0" expanded="true" />
-                <element signature="e#1473#1474#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,20 +104,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Budik.java" />
-        <option value="$PROJECT_DIR$/src/Renderer.java" />
         <option value="$PROJECT_DIR$/src/Cifernik.java" />
         <option value="$PROJECT_DIR$/src/zvuk.java" />
-        <option value="$PROJECT_DIR$/src/start.java" />
         <option value="$PROJECT_DIR$/src/Zvuk.java" />
         <option value="$PROJECT_DIR$/src/start2.java" />
+        <option value="$PROJECT_DIR$/src/start.java" />
+        <option value="$PROJECT_DIR$/src/Renderer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3832" />
-    <option name="y" value="-141" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="4063" />
+    <option name="y" value="62" />
+    <option name="width" value="922" />
+    <option name="height" value="494" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -125,8 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,10 +137,16 @@
               <item name="budik" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="budik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,11 +155,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560952344102" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ukazky_Vanek" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jogamp-all-platforms/jar/gluegen-rt-natives-windows-amd64.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
@@ -178,15 +182,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="start" />
+    <configuration name="Renderer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Renderer" />
       <module name="budik" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="start2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="start2" />
+    <configuration name="start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="start" />
       <module name="budik" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -195,7 +199,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.start" />
-        <item itemvalue="Application.start2" />
+        <item itemvalue="Application.Renderer" />
         <item itemvalue="Application.Budik" />
       </list>
     </recent_temporary>
@@ -240,9 +244,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3832" y="-141" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0804904" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -250,8 +253,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34777898" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34777898" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -277,30 +280,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Renderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="16" column="40" selection-start-line="15" selection-start-column="33" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/transforms/Mat4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
           <caret line="169" selection-start-line="169" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Budik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -319,43 +302,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cifernik.java" />
-    <entry file="file://$PROJECT_DIR$/src/start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1292#1474#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Budik.java" />
     <entry file="file://$PROJECT_DIR$/src/Zvuk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/start2.java">
+    <entry file="file://$PROJECT_DIR$/src/oglutils/OGLTextRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#reshape#0;class#start2#0" />
-            <element signature="method#keyTyped#0;class#start2#0" />
-            <element signature="method#keyPressed#0;class#start2#0" />
-            <element signature="method#keyReleased#0;class#start2#0" />
-            <element signature="method#mouseReleased#0;class#start2#0" />
-            <element signature="method#mouseEntered#0;class#start2#0" />
-            <element signature="method#mouseExited#0;class#start2#0" />
-            <marker date="1561380898996" expanded="true" signature="5635:5820" ph="..." />
+            <marker date="1561382034626" expanded="true" signature="5599:5784" ph="..." />
           </folding>
         </state>
       </provider>
@@ -366,10 +344,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>budik.jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

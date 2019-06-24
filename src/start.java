@@ -1,4 +1,3 @@
-import com.jogamp.nativewindow.WindowClosingProtocol;
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.awt.GLCanvas;
@@ -20,7 +19,7 @@ public class start {
 
             // The canvas
             final GLCanvas glcanvas = new GLCanvas(capabilities);
-            start2 s = new start2();
+            Renderer s = new Renderer();
             glcanvas.addGLEventListener(s);
             glcanvas.addMouseListener(s);
             glcanvas.addMouseMotionListener(s);

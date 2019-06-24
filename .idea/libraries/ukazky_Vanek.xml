@@ -2,8 +2,6 @@
   <library name="ukazky_Vanek">
     <CLASSES />
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/../ukazky_Vanek" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
