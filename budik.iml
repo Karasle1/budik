@@ -7,21 +7,21 @@
       <sourceFolder url="file://$MODULE_DIR$/textures" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/sound" type="java-resource" />
     </content>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../OpenGl/jogamp-all-platforms/jar/gluegen-rt.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../jogamp-all-platforms/jar/gluegen-rt.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../OpenGl/jogamp-all-platforms/jar/jogl-all.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

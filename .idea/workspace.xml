@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="budik.jar" />
+      <artifact name="budik:jar" />
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Renderer.java" line="109" />
+    <bookmark url="file://$PROJECT_DIR$/src/Renderer.java" line="96" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92b4baff-d496-4f80-894f-5c012c2984b0" name="Default Changelist" comment="">
@@ -14,11 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/budik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/budik.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/budik_jar/budik.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/budik_jar/budik.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/budik/start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/budik/start.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/start.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,12 +41,24 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Help.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="357">
               <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Renderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-374">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,9 +94,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
-    <option name="y" value="127" />
+    <option name="y" value="125" />
     <option name="width" value="1440" />
-    <option name="height" value="774" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -96,8 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,6 +124,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,7 +134,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560952344102" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../OpenGl/jogamp-all-platforms/jar/jogl-all.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -216,7 +224,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22147651" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -258,20 +266,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLEventListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLException.class" />
+    <entry file="jar://$PROJECT_DIR$/../jogamp-all-platforms/jar/jogl-all.jar!/com/jogamp/opengl/GLEventListener.class" />
     <entry file="file://$PROJECT_DIR$/src/Cifernik.java" />
     <entry file="file://$PROJECT_DIR$/src/Budik.java" />
     <entry file="file://$PROJECT_DIR$/src/Zvuk.java">
@@ -311,21 +307,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Renderer.java">
+    <entry file="file://$PROJECT_DIR$/src/Help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        <state relative-caret-position="357">
+          <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1561445053306" expanded="true" signature="5586:5771" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Help.java">
+    <entry file="file://$PROJECT_DIR$/src/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
+        <state relative-caret-position="-374">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -338,7 +333,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>budik.jar</last-edited>
+          <last-edited>budik:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
