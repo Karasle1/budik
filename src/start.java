@@ -5,8 +5,7 @@ import com.jogamp.opengl.util.FPSAnimator;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 
 public class start {
     private static final int FPS = 300; // animator's target frames per second
@@ -27,11 +26,34 @@ public class start {
             glcanvas.setSize(1024, 780);
             //creating frame
             final Frame frame = new Frame (" Budik");
-            //adding canvas to frame
+            final JButton btHelp = new JButton("?");
+            final Help help;
+            help = new Help();
+            JToolBar tlacitka = new JToolBar("Help");
+            tlacitka.add(btHelp);
+            frame.add(tlacitka, BorderLayout.NORTH);
+            btHelp.setMnemonic(KeyEvent.VK_F1);
+            btHelp.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JDialog dialog = new JDialog(frame);
+                    JTextArea textArea = new JTextArea(help.getText());
+                    textArea.setBackground(help.getBackround());
+                    textArea.setEditable(false);
+                    dialog.add(textArea);
+                    dialog.setTitle(help.getTitle());
+                    dialog.setSize(new Dimension(800, 600));
+                    dialog.setLocationRelativeTo(frame);
+                    dialog.setModal(true);
+                    dialog.setVisible(true);
+                }
+            });
+
+
+
             frame.add(glcanvas);
             frame.setSize( 1024, 780 );
             frame.setVisible(true);
-
             frame.addWindowListener(new WindowAdapter() {
                 @Override
                 public void windowClosing(WindowEvent e) {

@@ -20,7 +20,7 @@ public class Renderer extends Thread implements GLEventListener, MouseListener,
     private Camera cam = new Camera().withPosition(new Vec3D(0, 0, -1.5))
             .withAzimuth(Math.PI * 1.25)
             .withZenith(Math.PI * -0.125);
-    private int ox, oy, delta,width = 100 ;
+    private int ox, oy, delta;
     private double buzeniX, buzeniY,deltaBuzeni, buzeniPozice,deltaH ;
     private Texture texture,texture0,texture1;
     private ArrayList cifernik = new ArrayList<Vec3D>();
@@ -369,8 +369,8 @@ public class Renderer extends Thread implements GLEventListener, MouseListener,
 
         if ((ox < 400 || ox > 700) || (oy < 300 || oy > 700))
         {
-            cam = cam.addAzimuth(Math.PI * (ox - e.getX()) / width)
-                    .addZenith(Math.PI * (e.getY() - oy) / width);
+            cam = cam.addAzimuth(Math.PI * (ox - e.getX()) / 100)
+                    .addZenith(Math.PI * (e.getY() - oy) / 100);
             ox = e.getX();
             oy = e.getY();
         }
