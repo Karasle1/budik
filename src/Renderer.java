@@ -51,11 +51,17 @@ public class Renderer extends Thread implements GLEventListener, MouseListener, 
 		GLUquadric quadObj;
 		quadObj = glu.gluNewQuadric();
 
-		float[] light_position = new float[] { 1f, 2f, 1f, 0f };
-		float[] ambientLight = { 1f, 2f, 1f, 0f };
+		float[] light_position = new float[] { 15.0f, 25.0f, -10.0f,0.0f };
+		float[] ambientLight = { 0.9f, 0.9f, 0.9f, 0.0f };
+		float[] diffuseLight = { 1.0f,1.0f,1.0f,1.0f };
+		float[] specularLight = {1.0f, 1.0f, 1.0f,1.0f };
 
 		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, ambientLight, 0);
 		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, light_position, 0);
+		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, diffuseLight, 0);
+		gl.glLightfv(GL2.GL_LIGHT0,GL2.GL_SPECULAR,specularLight, 0);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_MODULATE);
+
 
 		// Nozicky a drzak zvonku
 		gl.glLoadIdentity();
@@ -82,7 +88,6 @@ public class Renderer extends Thread implements GLEventListener, MouseListener, 
 		gl.glRotated(120, 1.0f, 0.0f, 0.0f);
 		glu.gluCylinder(quadObj, 0.01f, 0.05f, 0.70f, 32, 32);
 
-		// zvonky
 		DoubleBuffer clipEq = DoubleBuffer.allocate(4);
 		clipEq.put(0, 0.0);
 		clipEq.put(1, 0.5);
@@ -110,7 +115,6 @@ public class Renderer extends Thread implements GLEventListener, MouseListener, 
 		gl.glTexCoord2d(0.49, 0.5);
 		gl.glVertex3d(0.00f, 0.00f, -4.0f);
 		for (int i = 0; i <= 360; i++) {
-			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_MODULATE);
 			double angle = 2 * Math.PI * i / 360;
 			double x = Math.cos(angle);
 			double y = Math.sin(angle);
@@ -139,7 +143,6 @@ public class Renderer extends Thread implements GLEventListener, MouseListener, 
 		gl.glEnd();
 		// bok
 		texture0.bind(gl);
-		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2GL3.GL_REPLACE);
 		gl.glBegin(GL2.GL_QUAD_STRIP);
 		for (int i = 0; i <= 360; i++) {
 			Vec3D a = (Vec3D) cifernik.get(i);
